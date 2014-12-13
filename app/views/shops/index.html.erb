@@ -1,0 +1,8 @@
+<h1>Shops</h1>
+<%= link_to 'home', welcome_index_path %><br />
+<ul>
+  <% @shops.each do |shop| %>
+  <li><%= link_to(shop.name, shop_path(shop)) %></li>
+  <% end %>
+</ul>
+
