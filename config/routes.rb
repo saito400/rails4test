@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'welcome/index'
+  root 'welcome#index'
+  resources :books, :only => :index
+  get 'books/with_quantity'
+  resources :shops, :only => [:index, :show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

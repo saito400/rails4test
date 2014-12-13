@@ -1,0 +1,18 @@
+
+<h1>Books with quantity amoung all shops</h1>
+<%= link_to 'home', welcome_index_path %><br /><br />
+<table border="1">
+  <tr>
+    <th>book id</th>
+    <th>title</th>
+    <th>quantity</th>
+  </tr>
+
+  <% @stocks.each do |stock| %>
+  <tr>
+    <td><%= stock[0][0] %></td>
+    <td><%= stock[0][1] %></td>
+    <td><%= stock[1] %></td>
+  </tr>
+  <% end %>
+</table>
