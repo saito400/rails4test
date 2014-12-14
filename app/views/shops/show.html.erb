@@ -11,7 +11,7 @@
     <th>quantity</th>
   </tr>
 
-  <% @shop.stock.includes(:book).order("books.title").each do |stock| %>
+  <% @shop.stock.includes(book: :author).order("books.title").each do |stock| %>
 
   <tr>
     <td><%= stock.id %></td>
