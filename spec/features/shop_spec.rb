@@ -20,11 +20,7 @@ describe Shop do
 
     context "登録データあり" do
 
-      let! (:shops) do
-        Shop.create(
-          :name => "Shinjuku Nishiguchi"
-        )
-      end
+      let!(:shop) { FactoryGirl.create(:shop) }
 
       before do
         visit(shops_path)
